@@ -1,0 +1,34 @@
+number=int(input("ΕΙΣΑΓΕΤΕ ΕΝΑΝ ΘΕΤΙΚΟ ΑΡΙΘΜΟ:"))
+a=number
+print("Ο ΑΡΙΘΜΟΣ ΠΟΥ ΕΠΙΛΕΞΑΤΕ ΕΙΝΑΙ:",repr(a))
+s=a*3+1
+print("Ο ΑΡΙΘΜΟΣ ΜΕΤΑ ΑΠΟ ΤΡΙΠΛΑΣΙΑΣΜΟ ΚΑΙ ΠΡΟΣΘΕΣΗ ΕΝΑ ΕΙΝΑΙ:",repr(s))
+result=0
+state=False
+
+while state==False:                       
+            while s>0  :
+     
+                  digit =s%10
+                  result =result + digit
+                  s=s//10
+            if(result<9):
+                state=True
+    
+                      
+                print("ΚΑΙ ΜΕ ΤΗΝ ΠΡΟΣΘΕΣΗ ΤΩΝ ΨΗΦΙΩΝ ΕΙΝΑΙ:",repr(result))                  
+                print("Ο ΑΡΙΘΜΟΣ ΕΙΝΑΙ ΜΟΝΟΨΗΦΙΟΣ")
+            if(result>9):
+                   print("ΕΠΑΝΑΛΑΜΒΑΝΟΥΜΕ ΔΙΑΔΙΚΑΣΙΑ")
+                   print("ΔΙΟΤΙ Ο ΑΡΙΘΜΟΣ:",repr(result),"ΔΕΝ ΕΙΝΑΙ ΜΟΝΟΨΗΦΙΟΣ")
+                   b=result*3+1
+                   result =0
+                   while b>0:
+                      digit = b%10
+                      
+                      result = result + digit
+                      b= b//10
+                      state=True
+                
+                   print("Ο  ΑΡΙΘΜΟΣ ΕΓΙΝΕ ΜΟΝΟΨΗΦΙΟΣ!!!")                  
+                   print("ΑΠΟΤΕΛΕΣΜΑ:",result)
